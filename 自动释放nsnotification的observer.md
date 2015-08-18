@@ -70,7 +70,7 @@
 ---
 
 
-#### 结果: 实验代码表明, 可以实现,但直接hook NSNotificationCenter的addObserver：... 方法会导致系统内部自己调用某些监听通知的逻辑出问题,导致直接crash,需要进一步排查. 但如果是新增一个方法, 让APFakeObserver来充当中间人进行消息转发,是可以实现的. 测试代码见gitlab. 
+#### 结果: 实验代码表明, 可以实现,但直接hook NSNotificationCenter的addObserver：... 方法会导致系统内部自己调用某些监听通知的逻辑出问题,导致直接crash,需要进一步排查. 但如果是新增一个方法, 让APFakeObserver来充当中间人进行消息转发,是可以实现的. 测试代码见[gitlab](https://github.com/JasonWorking/AutoRemoveObserverDemo)(家里连不上VPN,先传github了). 
 
 
 
