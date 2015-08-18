@@ -64,7 +64,10 @@
 
 ####二、@卡迩 提供思路：给每一个Observer添加一个Associated object 如`AssO`, `AssO`一个weak属性指向Observer,试图通过Observer释放时会先释放`AssO`, 从而在`AssO`的dealloc中通过weak移除Observer. 
 ---
-~~#### 结果: 实验代码表明, 一个对象的Dealloc方法是先于Associated Objectd的Dealloc方法调用的, 所以在Associated Object的dealloc中去释放通知已经晚了. 
+~~
+
+
+#### 结果: 实验代码表明, 一个对象的Dealloc方法是先于Associated Objectd的Dealloc方法调用的, 所以在Associated Object的dealloc中去释放通知已经晚了. 
 ~~
 ### 这个思路可以调整一下,可以在AssociatedObject 的dealloc 方法中调用一个预定的block来移除通知
 
